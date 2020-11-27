@@ -1,0 +1,120 @@
+@mixin list-reset {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@mixin reset {
+  padding: 0;
+  margin: 0;
+}
+
+@mixin tablet {
+  @media (max-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $mobile-width) {
+    @content;
+  }
+}
+
+@mixin title-desktop {
+  font-size: 50px;
+  line-height: 55px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+@mixin title-tablet {
+  font-size: 42px;
+  line-height: 42px;
+}
+
+@mixin title-mobile {
+  font-size: 32px;
+  line-height: 32px;
+}
+
+
+
+
+@mixin list-default {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin wrap-mobile {
+  max-width: 767px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@mixin wrap-tablet {
+  max-width: 1023px;
+  margin: 0 auto;
+  padding: 0 110px;
+}
+
+@mixin wrap-desktop {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 120px;
+}
+
+@mixin title-desktop {
+  font-size: 35px;
+  line-height: 43px;
+  font-weight: 800;
+  color: #2d383f;
+}
+
+@mixin decoration-title-desktop {
+  font-size: 55px;
+  line-height: 67px;
+  font-weight: 800;
+  color: rgba(45, 56, 63, 0.03);
+}
+
+@mixin title-tablet {
+  font-size: 25px;
+  line-height: 30px;
+}
+
+@mixin decoration-title-tablet {
+  font-size: 40px;
+  line-height: 49px;
+}
+
+@mixin title-mobile {
+  font-size: 22px;
+  line-height: 27px;
+}
+
+@mixin decoration-title-mobile {
+  font-size: 30px;
+  line-height: 37px;
+}
+
+@mixin button-slider {
+  display: block;
+  width: 37px;
+  height: 35px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: url("../img/arrow.svg") no-repeat center;
+  background-color: $blue;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+

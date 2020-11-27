@@ -1,0 +1,210 @@
+.request__wrap {
+  margin: 0 auto;
+  padding: 50px 60px;
+
+  width: calc(100% - 206px);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  box-sizing: border-box;
+
+  @include tablet {
+    padding: 98px 0 100px;
+
+    width: calc(100% - 348px);
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @include mobile {
+    padding: 65px 0;
+
+    width: calc(100% - 30px);
+  }
+}
+
+.request__form {
+  padding: 44px 50px 52px;
+
+  width: 45%;
+  margin: 0 auto;
+  border-radius: 10px;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  background-color: $blue;
+
+  @include tablet {
+    padding: 45px 50px 50px;
+  }
+
+  @include mobile {
+    margin: 0 auto;
+    padding: 35px 30px 40px;
+    width: 80%;
+  }
+}
+
+.request__form p {
+  @include reset;
+
+  width: 100%;
+  text-align: center;
+
+  margin-bottom: 25px;
+
+  color: $white;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+
+  @include tablet {
+    margin-bottom: 26px;
+  }
+
+  @include mobile {
+    margin-bottom: 28px;
+
+    text-align: center;
+    line-height: 140%;
+  }
+}
+
+.request__form label {
+  width: 100%;
+
+  cursor: pointer;
+}
+
+.request__form input {
+  padding: 13.5px 14px;
+  margin-bottom: 18px;
+
+  width: 100%;
+
+  font-family: inherit;
+  font-size: 14px;
+  box-sizing: border-box;
+  border-radius: 0;
+  border: none;
+
+  color: $blue;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    outline: 2px solid lightseagreen;
+  }
+
+  @include mobile {
+    margin-bottom: 20px;
+    padding: 12px 14px;
+  }
+}
+
+.request__checkbox {
+  display: flex;
+
+  width: 100%;
+
+  font-size: 10px;
+  line-height: 130%;
+
+  color: $white;
+
+  label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+}
+
+.request__checkbox input {
+  margin-bottom: 0;
+  width: 18px;
+
+  @include mobile {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.request__tick-field {
+  margin-right: 5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 18px;
+  height: 18px;
+
+  background-color: $white;
+
+  @include mobile {
+    margin-right: 8px;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.request__checkbox-text {
+  @include mobile {
+    width: 95%;
+  }
+}
+
+.request__checkbox svg {
+  fill: $white;
+}
+
+.request__checkbox input:not(:checked) + .request__tick-field svg {
+  display: none;
+}
+
+.request__checkbox input:checked + .request__tick-field svg {
+  display: block;
+}
+
+.request__checkbox input:hover + .request__tick-field,
+.request__checkbox input:focus + .request__tick-field {
+  outline: 2px solid lightseagreen;
+}
+
+.request__button {
+  padding: 10px;
+  margin-top: 32px;
+
+  width: 100%;
+
+  background-color: $white;
+  text-align: center;
+  color: $blue;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 150%;
+  cursor: pointer;
+  border: none;
+
+  &:hover {
+    color: rgba($blue, 0.7);
+    background-color: $grey;
+  }
+
+  &:focus,
+  &:active {
+    color: rgba($blue, 0.3);
+    background-color: rgba($grey, 0.5);
+  }
+
+  @include mobile {
+    margin-top: 27px;
+
+    width: 100%;
+  }
+}

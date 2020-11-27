@@ -1,0 +1,191 @@
+.contacts {
+  margin: 0 auto;
+  padding: 120px 0;
+
+  width: calc(100% - 206px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include tablet {
+    padding: 100px 0;
+
+    width: calc(100% - 90px);
+  }
+
+  @include mobile {
+    padding: 60px 0 67px;
+
+    width: calc(100% - 30px);
+
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.contacts__map {
+  margin-right: 8.5%;
+
+  position: relative;
+
+  @include tablet {
+    margin-right: 4%;
+  }
+
+  @include mobile {
+    margin-right: 0;
+    order: 1;
+  }
+}
+
+.contacts__map-iframe {
+  display: block;
+
+  @include tablet {
+    width: 324px;
+    height: 335px;
+  }
+
+  @include mobile {
+    width: 290px;
+    height: 316px;
+  }
+}
+
+.contacts__map svg {
+  position: absolute;
+  top: 215px;
+  left: 250px;
+  z-index: 2;
+
+  @include tablet {
+    left: 110px;
+  }
+
+  @include mobile {
+    top: 225px;
+  }
+}
+
+.contacts__info {
+  width: 43%;
+
+  @include tablet {
+    width: 48%;
+  }
+
+  @include mobile {
+    width: 100%;
+
+    margin-bottom: 33px;
+  }
+}
+
+.contacts__info p {
+  @include reset;
+
+  margin-bottom: 33px;
+
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+
+  @include tablet {
+    margin-bottom: 28px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  @include mobile {
+    margin-bottom: 25px;
+    display: block;
+  }
+}
+
+.contacts svg {
+  margin-right: 1%;
+  width: 22px;
+}
+
+.contacts__address {
+  margin-bottom: 20px;
+  display: flex;
+
+  width: 95%;
+
+  @include tablet {
+    margin-bottom: 18px;
+  }
+
+  @include mobile {
+    margin-bottom: 18px;
+    width: 100%;
+  }
+}
+
+.contacts__address svg {
+  margin-left: -2px;
+
+  @include tablet {
+    margin-left: 0;
+    padding-top: 5px;
+    padding-right: 2%;
+  }
+
+  @include mobile {
+    margin-left: -2px;
+  }
+}
+
+.contacts__address p {
+  @include reset;
+
+  width: 97%;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+}
+
+.contacts__phone {
+  width: 95%;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  @include mobile {
+    width: 100%;
+  }
+}
+
+.contacts__phone svg {
+  margin-left: -2px;
+
+  @include tablet {
+    margin-left: 0;
+    padding-top: 4px;
+  }
+
+  @include mobile {
+    margin-left: -2px;
+  }
+}
+
+.contacts__phone-link {
+  width: 97%;
+
+  color: $blue;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  white-space: nowrap;
+}
