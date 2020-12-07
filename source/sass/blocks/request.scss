@@ -1,17 +1,13 @@
 .request__wrap {
   margin: 0 auto;
-  padding: 50px 60px;
+  padding: 50px 0;
 
   width: calc(100% - 206px);
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 
   box-sizing: border-box;
 
   @include tablet {
-    padding: 98px 0 100px;
+    padding: 30px 0;
 
     width: calc(100% - 348px);
 
@@ -21,31 +17,35 @@
   }
 
   @include mobile {
-    padding: 65px 0;
 
     width: calc(100% - 30px);
   }
 }
 
-.request__form {
-  padding: 44px 50px 52px;
+.request h2 {
+  @include title-desktop;
+  color: $blue;
+  margin: 0 0 58px 0;
 
-  width: 45%;
+  @include tablet {
+    @include title-tablet
+  }
+
+  @include mobile {
+    @include title-mobile
+  }
+}
+
+.request__form {
+
+  width: 60%;
   margin: 0 auto;
   border-radius: 10px;
 
   display: flex;
   flex-wrap: wrap;
 
-  background-color: $blue;
-
-  @include tablet {
-    padding: 45px 50px 50px;
-  }
-
   @include mobile {
-    margin: 0 auto;
-    padding: 35px 30px 40px;
     width: 80%;
   }
 }
@@ -90,15 +90,16 @@
   font-family: inherit;
   font-size: 14px;
   box-sizing: border-box;
-  border-radius: 0;
-  border: none;
+  border-radius: 10px;
+  border: 2px solid $grey;
 
   color: $blue;
   cursor: pointer;
 
   &:hover,
   &:focus {
-    outline: 2px solid lightseagreen;
+    border: 2px solid $gradient-blue;
+    outline: none;
   }
 
   @include mobile {
@@ -114,8 +115,6 @@
 
   font-size: 10px;
   line-height: 130%;
-
-  color: $white;
 
   label {
     display: flex;
@@ -136,6 +135,8 @@
 
 .request__tick-field {
   margin-right: 5px;
+  border: 2px solid $grey;
+  border-radius: 5px;
 
   display: flex;
   justify-content: center;
@@ -173,33 +174,34 @@
 
 .request__checkbox input:hover + .request__tick-field,
 .request__checkbox input:focus + .request__tick-field {
-  outline: 2px solid lightseagreen;
+  border: 2px solid $gradient-blue;
+  outline: none;
 }
 
 .request__button {
   padding: 10px;
   margin-top: 32px;
 
+
   width: 100%;
-
-  background-color: $white;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  border-radius: 10px;
+  border: 2px solid #102654;
   text-align: center;
-  color: $blue;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 150%;
   cursor: pointer;
-  border: none;
+  background: transparent;
+  color: #102654;
+  min-height: 50px;
 
-  &:hover {
-    color: rgba($blue, 0.7);
-    background-color: $grey;
-  }
-
-  &:focus,
-  &:active {
-    color: rgba($blue, 0.3);
-    background-color: rgba($grey, 0.5);
+  &:hover,
+  &:focus {
+      border: none;
+      background: linear-gradient($blue, $red);
+      color: $white-color;
   }
 
   @include mobile {
@@ -207,4 +209,85 @@
 
     width: 100%;
   }
+}
+
+.request svg {
+  margin-right: 1%;
+  width: 22px;
+}
+
+.request__address {
+  margin-bottom: 5px;
+  display: flex;
+
+  width: 95%;
+
+  @include mobile {
+    width: 100%;
+  }
+}
+
+.request__address svg {
+  margin-left: -2px;
+
+  @include tablet {
+    margin-left: 0;
+    padding-top: 5px;
+    padding-right: 2%;
+  }
+
+  @include mobile {
+    margin-left: -2px;
+  }
+}
+
+.request__address p {
+  @include reset;
+
+  width: 97%;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+}
+
+.request__phone {
+  width: 95%;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  @include mobile {
+    width: 100%;
+  }
+}
+
+.request__phone svg {
+  margin-left: -2px;
+
+  @include tablet {
+    margin-left: 0;
+    padding-top: 4px;
+  }
+
+  @include mobile {
+    margin-left: -2px;
+  }
+}
+
+.request__phone-link {
+  width: 97%;
+
+  color: $blue;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  white-space: nowrap;
 }

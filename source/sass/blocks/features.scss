@@ -12,21 +12,77 @@
     padding-top: 30px;
     width: 100%;
   }
-
 }
 
-.features h2 {
-  @include title-desktop;
-  color: $blue;
-  margin: 0 0 58px 0;
-  text-align: center;
+.features__list {
+  @include list-reset;
+  justify-content: space-between;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  @include mobile {
+    justify-content: center;
+  }
+}
+
+.features__item {
+  width: 30%;
+  position: relative;
+
+  &.features__left-block {
+
+    .features__count,
+    .features__units,
+    .features__description-block {
+      text-align: right;
+
+      @include tablet {
+        text-align: center;
+      }
+    }
+  }
+
+  &.features__center-block {
+
+    .features__count,
+    .features__units,
+    .features__description-block {
+      text-align: center;
+    }
+  }
 
   @include tablet {
-   @include title-tablet
+    .features__count,
+    .features__units,
+    .features__description-block {
+      text-align: center;
+    }
+  }
+
+  &:nth-of-type(1):after,
+  &:nth-of-type(2):after{
+    content: "";
+    display: block;
+    height: 80%;
+    width: 2px;
+    background: rgba(209, 10, 66, 0.2);
+    position: absolute;
+    bottom: -20px;
+    right: -10%;
+
+    @include mobile {
+      width: 40%;
+      bottom: -30px;
+      height: 2px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 
   @include mobile {
-    @include title-mobile
+    margin: 0 0 50px;
+    width: 80%;
   }
 }
 
@@ -78,38 +134,38 @@
   margin: 0;
 }
 
-.features__main-block {
-  width: 23.1%;
-  min-height: 240px;
-  border-radius: 10px;
-  padding: 55px 33px 10px;
-  margin: -90px auto 0;
-  position: relative;
-  z-index: 1;
-  background: linear-gradient(#35548a,#f22f45,#35548a);
-
-  &::after {
-    content: "";
-    display: block;
-    width: 142%;
-    height: 2px;
-    background: rgba(209, 10, 66, 0.2);
-    position: absolute;
-    top: 154px;
-    left: -400px;
-  }
-
-  &::before {
-    content: "";
-    display: block;
-    width: 142%;
-    height: 2px;
-    background: rgba(209, 10, 66, 0.2);
-    position: absolute;
-    top: 154px;
-    right: -400px;
-  }
-}
+//.features__main-block {
+//  width: 23.1%;
+//  min-height: 240px;
+//  border-radius: 10px;
+//  padding: 55px 33px 10px;
+//  margin: -90px auto 0;
+//  position: relative;
+//  z-index: 1;
+//  background: linear-gradient(#35548a,#f22f45,#35548a);
+//
+//  &::after {
+//    content: "";
+//    display: block;
+//    width: 142%;
+//    height: 2px;
+//    background: rgba(209, 10, 66, 0.2);
+//    position: absolute;
+//    top: 154px;
+//    left: -400px;
+//  }
+//
+//  &::before {
+//    content: "";
+//    display: block;
+//    width: 142%;
+//    height: 2px;
+//    background: rgba(209, 10, 66, 0.2);
+//    position: absolute;
+//    top: 154px;
+//    right: -400px;
+//  }
+//}
 
 .features__main-count {
   font-weight: 700;
@@ -168,11 +224,6 @@
 
 @media (max-width: $tablet-width) {
 
-  .features__title {
-    @include title-tablet;
-    margin: 0 0 45px 0;
-  }
-
   .features__count {
     font-size: 58px;
     line-height: 58px;
@@ -209,74 +260,16 @@
     line-height: 33px;
     margin: 0 0 12px;
   }
-
-  .features__top-block {
-    padding: 0;
-    justify-content: space-between;
-  }
-
-  .features__area,
-  .features__parking,
-  .features__comfort,
-  .features__experience {
-    width: 44.7%;
-  }
-
-  .features__parking,
-  .features__experience {
-    justify-content: flex-end;
-    margin-right: 5px;
-  }
-
-  .features__area,
-  .features__comfort {
-    margin-right: 0;
-  }
-
-  .features__bottom-block {
-    padding: 0;
-    margin-top: 0;
-    justify-content: space-between;
-  }
-
-  .features__parking-description,
-  .features__experience-description {
-    width: 230px;
-  }
 }
 
 @media (max-width: $mobile-width) {
-
-  .features__title {
-    @include title-mobile;
-  }
 
   .features__description-block h3 {
     margin: -7px 0 2px 0;
   }
 
-  .features__main-block {
-    min-height: 239px;
-    padding: 38px 74px 20px;
-    margin: 44px auto 41px;
-  }
-
   .features__main-unit {
     margin: -6px 0 10px;
-  }
-
-  .features__top-block,
-  .features__bottom-block {
-    justify-content: center;
-    flex-direction: column;
-  }
-
-  .features__area,
-  .features__parking,
-  .features__comfort,
-  .features__experience {
-    width: 100%;
-    flex-direction: column;
   }
 
   .features__count,
@@ -290,19 +283,5 @@
     width: 227px;
     margin: 0 auto;
     text-align: center;
-  }
-
-  .features__parking {
-    margin-top: 34px;
-  }
-
-  .features__parking h3,
-  .features__comfort h3,
-  .features__experience h3 {
-    margin-top: -7px;
-  }
-
-  .features__experience {
-    margin-top: 35px;
   }
 }

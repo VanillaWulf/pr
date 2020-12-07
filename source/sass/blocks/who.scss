@@ -15,24 +15,9 @@
   }
 
   @include mobile {
-    padding: 60px 0 65px;
+    padding: 0 0 65px;
 
     width: calc(100% - 30px);
-  }
-}
-
-.who h2 {
-  @include title-desktop;
-  color: $blue;
-  margin: 0 0 58px 0;
-  text-align: center;
-
-  @include tablet {
-    @include title-tablet
-  }
-
-  @include mobile {
-    @include title-mobile
   }
 }
 

@@ -1,7 +1,7 @@
 .process__wrap {
   width: calc(100% - 206px);
   margin: 0 auto;
-  padding: 120px 0 140px;
+  padding: 70px 0 0;
 
   @include tablet {
     padding-top: 28px;
@@ -12,22 +12,6 @@
     padding-top: 0;
     width: 100%;
   }
-
-}
-
-.process h2 {
-  @include title-desktop;
-  color: $blue;
-  margin: 0 0 58px 0;
-  text-align: center;
-
-  @include tablet {
-    @include title-tablet
-  }
-
-  @include mobile {
-    @include title-mobile
-  }
 }
 
 .process__list {
@@ -35,6 +19,7 @@
   display: flex;
   list-style: none;
   position: relative;
+  padding: 0 0 125px;
 
   &:after {
     width: 100%;
@@ -48,6 +33,7 @@
   @include tablet {
     flex-direction: column;
     align-items: center;
+    padding: 0 0 50px;
 
     &:after {
       display: none;
@@ -98,5 +84,4 @@
       left: -20px;
     }
   }
-
 }
