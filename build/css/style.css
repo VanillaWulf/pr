@@ -311,6 +311,131 @@ a {
 .page-main img {
   display: block; }
 
+.about {
+  padding: 100px 0px 150px;
+  background: url(/img/smoke.png) -50% no-repeat;
+  background-size: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  @media (max-width: 1199px) {
+    .about {
+      padding: 95px 0 50px; } }
+  @media (max-width: 767px) {
+    .about {
+      background: none;
+      padding: 65px 0 67px 0; } }
+  .about .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    @media (max-width: 1199px) {
+      .about .container {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; } }
+    @media (max-width: 767px) {
+      .about .container {
+        max-width: 100%; } }
+
+.about p {
+  width: 100%;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 33px;
+  color: #102654;
+  margin: 0 0 20px; }
+  .about p:nth-last-of-type(1) {
+    margin: 0 0 70px; }
+  @media (max-width: 1199px) {
+    .about p {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 22px; } }
+
+.about__button {
+  display: block;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 10px;
+  border: none;
+  text-align: center;
+  width: 206px;
+  margin: 0 auto;
+  padding: 24px 0;
+  cursor: pointer;
+  color: #f9f9fd;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f22f45), to(#243759));
+  background: linear-gradient(#f22f45, #243759);
+  -webkit-transition: background 2s;
+  transition: background 2s; }
+  .about__button:hover {
+    background: -webkit-gradient(linear, left top, left bottom, from(#243759), to(#f22f45));
+    background: linear-gradient(#243759, #f22f45);
+    -webkit-transition: background 2s;
+    transition: background 2s; }
+
+.about__wrap {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center; }
+  @media (max-width: 1199px) {
+    .about__wrap {
+      width: 75%;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; } }
+  @media (max-width: 767px) {
+    .about__wrap {
+      width: 90%;
+      text-align: left; } }
+
+.about__info-wrapper {
+  margin-left: 62px; }
+  @media (max-width: 1199px) {
+    .about__info-wrapper {
+      margin-left: 0; } }
+  .about__info-wrapper h2 {
+    font-size: 49px;
+    text-transform: uppercase;
+    margin: 0 0 8px 0;
+    letter-spacing: 0.09rem; }
+    @media (max-width: 1199px) {
+      .about__info-wrapper h2 {
+        font-size: 42px; } }
+    @media (max-width: 767px) {
+      .about__info-wrapper h2 {
+        font-size: 32px; } }
+  .about__info-wrapper h3 {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0 0 42px 0; }
+    @media (max-width: 767px) {
+      .about__info-wrapper h3 {
+        margin-bottom: 30px; } }
+  .about__info-wrapper p {
+    margin: 0 0 8px 0;
+    font-weight: 300;
+    line-height: 150%; }
+    @media (max-width: 767px) {
+      .about__info-wrapper p {
+        margin-bottom: 0; } }
+  .about__info-wrapper p:last-child {
+    margin-bottom: 0; }
+    @media (max-width: 1199px) {
+      .about__info-wrapper p:last-child {
+        display: none; } }
+
 .features__wrap {
   width: calc(100% - 206px);
   margin: 0 auto;
@@ -458,28 +583,12 @@ a {
   display: flex;
   padding: 0 5px 0 26px; }
 
-.features__area,
-.features__parking,
-.features__comfort,
-.features__experience {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 32.8%; }
-
-.features__area,
-.features__comfort {
-  margin-right: 35%; }
-
 .features__bottom-block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding: 0 10px 0 20px;
   margin-top: -82px; }
-
-.features__experience h3 {
-  margin: 4px 0 6px 0; }
 
 @media (max-width: 1199px) {
   .features__count {

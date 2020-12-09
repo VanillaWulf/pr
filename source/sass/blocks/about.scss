@@ -1,0 +1,142 @@
+.about {
+  padding: 100px 0px 150px;
+  background: url(/img/smoke.png) -50% no-repeat;
+  background-size: 50%;
+
+  display: flex;
+  align-items: center;
+
+  @include tablet {
+    padding: 95px 0 50px;
+  }
+
+  @include mobile {
+    background: none;
+    padding: 65px 0 67px 0;
+  }
+
+  .container {
+    display: flex;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @include mobile {
+      max-width: 100%;
+    }
+  }
+}
+
+.about p {
+  width: 100%;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 33px;
+  color: $dark-blue-color;
+  margin: 0 0 20px;
+
+  &:nth-last-of-type(1) {
+    margin: 0 0 70px;
+  }
+
+  @include tablet() {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+
+.about__button {
+  display: block;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 10px;
+  border: none;
+  text-align: center;
+  width: 206px;
+  margin: 0 auto;
+  padding: 24px 0;
+  cursor: pointer;
+  color: $white;
+  background: linear-gradient($red, $blue);
+  transition: background 2s;
+
+  &:hover {
+    background: linear-gradient($blue, $red);
+    transition: background 2s;
+  }
+}
+
+
+.about__wrap {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+
+  @include tablet {
+    width: 75%;
+    justify-content: center;
+  }
+
+  @include mobile {
+    width: 90%;
+    text-align: left;
+  }
+}
+
+.about__info-wrapper {
+  margin-left: 62px;
+
+  @include tablet {
+    margin-left: 0;
+  }
+
+  h2 {
+    font-size: 49px;
+    text-transform: uppercase;
+    margin: 0 0 8px 0;
+    letter-spacing: 0.09rem;
+
+    @include tablet {
+      font-size: 42px;
+    }
+
+    @include mobile {
+      font-size: 32px;
+    }
+  }
+
+  h3 {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0 0 42px 0;
+
+    @include mobile {
+      margin-bottom: 30px;
+    }
+  }
+
+  p {
+    margin: 0 0 8px 0;
+    font-weight: 300;
+    line-height: 150%;
+
+    @include mobile {
+      margin-bottom: 0;
+    }
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+
+    @include tablet {
+      display: none;
+    }
+  }
+}
