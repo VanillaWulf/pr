@@ -43,17 +43,17 @@
   padding: 40px 3.56%;
 
   width: 48.72%;
-  min-height: 299px;
+  min-height: 200px;
 
   background-color: $white;
-  border: 1px solid #ebebeb;
+  border: 1px solid #b7c6e0;
   border-left: 3px solid $blue;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   box-sizing: border-box;
 
   &:hover {
-    background-color: $blue;
+    background: linear-gradient($blue, $red,  $blue);
     border: 1px solid $blue;
 
     position: relative;
@@ -67,10 +67,6 @@
       background-size: cover;
     }
 
-    svg {
-      fill: $white;
-    }
-
     h3 {
       color: $white;
     }
@@ -80,94 +76,11 @@
     }
   }
 
-  &--stopwatch:hover {
-    &::before {
-      width: 29px;
-      height: 35px;
-      background-image: url("../img/stopwatch-icon-white.svg");
-    }
-
-    @include tablet {
-      &::before {
-        width: 29px;
-        height: 35px;
-      }
-    }
-  }
-
-  &--hired:hover {
-    position: relative;
-
-    &::before {
-      width: 35px;
-      height: 35px;
-      background-image: url("../img/hired-icon-white.svg");
-    }
-
-    @include tablet {
-      &::before {
-        width: 31px;
-        height: 32px;
-      }
-    }
-  }
-
-
-  &--detective:hover {
-    &::before {
-      width: 36px;
-      height: 31px;
-      background-image: url("../img/detective-icon-white.svg");
-    }
-
-    @include tablet {
-      &::before {
-        width: 30px;
-        height: 26px;
-      }
-    }
-  }
-
-  &--tag:hover {
-    &::before {
-      width: 35px;
-      height: 35px;
-      background-image: url("../img/tag-icon-white.svg");
-    }
-
-    @include tablet {
-      &::before {
-        width: 32px;
-        height: 32px;
-      }
-    }
-  }
-
   @include tablet {
     padding: 24px 2.85% 25px 3.5%;
 
-    width: 48%;
-    min-height: 232px;
-
-    &--stopwatch svg {
-      width: 29px;
-      height: 35px;
-    }
-
-    &--hired svg {
-      width: 31px;
-      height: 32px;
-    }
-
-    &--detective svg {
-      width: 30px;
-      height: 26px;
-    }
-
-    &--tag svg {
-      width: 32px;
-      height: 32px;
-    }
+    width: 44%;
+    min-height: 250px;
 
     &:hover {
       &::before {
@@ -177,29 +90,9 @@
   }
 
   @include mobile {
-    margin-top: 20px;
+    margin: 20px auto;
     padding: 24px 3.2% 28px 8%;
-    width: 100%;
-
-    &--stopwatch svg {
-      width: 29px;
-      height: 35px;
-    }
-
-    &--hired svg {
-      width: 31px;
-      height: 32px;
-    }
-
-    &--detective svg {
-      width: 30px;
-      height: 26px;
-    }
-
-    &--tag svg {
-      width: 32px;
-      height: 32px;
-    }
+    width: 80%;
   }
 }
 
@@ -226,46 +119,6 @@
   }
 }
 
-.sum__item--stopwatch h3 {
-  @include tablet {
-    margin-bottom: 10px;
-  }
-
-  @include mobile {
-    margin-top: 7px;
-    margin-bottom: 12px;
-  }
-}
-
-.sum__item--detective h3 {
-  margin-top: 17px;
-
-  @include tablet {
-    margin-top: 8px;
-    margin-bottom: 16px;
-
-    white-space: nowrap;
-  }
-
-  @include mobile {
-    margin-top: 8px;
-    margin-bottom: 14px;
-    white-space: normal;
-    width: 95%;
-  }
-}
-
-.sum__item--tag h3 {
-  @include tablet {
-    margin-bottom: 10px;
-  }
-
-  @include mobile {
-    margin-top: 5px;
-    margin-bottom: 14px;
-  }
-}
-
 .sum__item p {
   @include reset;
 
@@ -274,9 +127,6 @@
   }
 }
 
-.sum__item--hired p {
-  width: 100%;
-}
 
 .sum__about {
   display: flex;

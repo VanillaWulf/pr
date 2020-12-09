@@ -777,6 +777,11 @@ a {
       background: -webkit-gradient(linear, left top, left bottom, from(#243759), to(#f22f45));
       background: linear-gradient(#243759, #f22f45);
       color: #ffffff; }
+    .price__list li:hover .price__price-container:before {
+      width: 70%;
+      background: #f22f45;
+      bottom: 0;
+      height: 5px; }
 
 .price__list li:nth-child(3n) {
   margin-right: 0; }
@@ -792,19 +797,8 @@ a {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  margin: 10px 0 0;
+  margin: 10px 0 37px;
   text-align: center; }
-
-.price__bg-price {
-  font-weight: 700;
-  font-size: 80px;
-  line-height: 90px;
-  display: block;
-  text-align: center;
-  margin-bottom: -70px;
-  margin-top: 35px;
-  color: #d8d8d9;
-  opacity: 0.48; }
 
 .price__price-container {
   display: -webkit-box;
@@ -817,14 +811,24 @@ a {
       -ms-flex-pack: center;
           justify-content: center;
   margin-bottom: 34px;
-  position: relative;
-  z-index: 10; }
+  position: relative; }
+  .price__price-container:before {
+    content: '';
+    width: 100%;
+    height: 40px;
+    background: #d8d8d9;
+    position: absolute;
+    z-index: 1;
+    border-radius: 20%;
+    -webkit-transition: height 500ms, bottom 500ms, width 500ms;
+    transition: height 500ms, bottom 500ms, width 500ms; }
 
 .price__price {
   font-weight: 700;
   font-size: 100px;
   line-height: 110px;
-  color: #103aae; }
+  color: #103aae;
+  z-index: 2; }
 
 .price__buy-link {
   display: block;
@@ -842,14 +846,6 @@ a {
   cursor: pointer;
   color: #102654; }
 
-.hide {
-  display: none; }
-
-.show {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-
 @media (max-width: 1199px) {
   .price__title {
     font-size: 42px;
@@ -865,6 +861,10 @@ a {
         -ms-flex-align: center;
             align-items: center;
     margin-top: 45px; }
+  .price__list p {
+    margin: 10px 0; }
+  .price__list li:nth-of-type(1) h3 {
+    margin: 0 0 30px; }
   .price__list li {
     width: 50%;
     margin-right: 0;
@@ -889,14 +889,6 @@ a {
     font-size: 48px;
     line-height: 72px;
     margin-right: 11px; }
-  .price__price-ruble {
-    width: 24px;
-    height: 33px; }
-  .price__bg-price {
-    font-size: 80px;
-    line-height: 80px;
-    margin-top: 28px;
-    margin-bottom: -55px; }
   .price__price-container {
     margin-bottom: 30px; } }
 
@@ -946,16 +938,17 @@ a {
   margin-top: 30px;
   padding: 40px 3.56%;
   width: 48.72%;
-  min-height: 299px;
+  min-height: 200px;
   background-color: #f9f9fd;
-  border: 1px solid #ebebeb;
+  border: 1px solid #b7c6e0;
   border-left: 3px solid #243759;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
   .sum__item:hover {
-    background-color: #243759;
+    background: -webkit-gradient(linear, left top, left bottom, from(#243759), color-stop(#f22f45), to(#243759));
+    background: linear-gradient(#243759, #f22f45, #243759);
     border: 1px solid #243759;
     position: relative; }
     .sum__item:hover::before {
@@ -964,82 +957,22 @@ a {
       left: 7.56%;
       content: "";
       background-size: cover; }
-    .sum__item:hover svg {
-      fill: #f9f9fd; }
     .sum__item:hover h3 {
       color: #f9f9fd; }
     .sum__item:hover p {
       color: #f9f9fd; }
-  .sum__item--stopwatch:hover::before {
-    width: 29px;
-    height: 35px;
-    background-image: url("../img/stopwatch-icon-white.svg"); }
-  @media (max-width: 1199px) {
-    .sum__item--stopwatch:hover::before {
-      width: 29px;
-      height: 35px; } }
-  .sum__item--hired:hover {
-    position: relative; }
-    .sum__item--hired:hover::before {
-      width: 35px;
-      height: 35px;
-      background-image: url("../img/hired-icon-white.svg"); }
-    @media (max-width: 1199px) {
-      .sum__item--hired:hover::before {
-        width: 31px;
-        height: 32px; } }
-  .sum__item--detective:hover::before {
-    width: 36px;
-    height: 31px;
-    background-image: url("../img/detective-icon-white.svg"); }
-  @media (max-width: 1199px) {
-    .sum__item--detective:hover::before {
-      width: 30px;
-      height: 26px; } }
-  .sum__item--tag:hover::before {
-    width: 35px;
-    height: 35px;
-    background-image: url("../img/tag-icon-white.svg"); }
-  @media (max-width: 1199px) {
-    .sum__item--tag:hover::before {
-      width: 32px;
-      height: 32px; } }
   @media (max-width: 1199px) {
     .sum__item {
       padding: 24px 2.85% 25px 3.5%;
-      width: 48%;
-      min-height: 232px; }
-      .sum__item--stopwatch svg {
-        width: 29px;
-        height: 35px; }
-      .sum__item--hired svg {
-        width: 31px;
-        height: 32px; }
-      .sum__item--detective svg {
-        width: 30px;
-        height: 26px; }
-      .sum__item--tag svg {
-        width: 32px;
-        height: 32px; }
+      width: 44%;
+      min-height: 250px; }
       .sum__item:hover::before {
         top: 25px; } }
   @media (max-width: 767px) {
     .sum__item {
-      margin-top: 20px;
+      margin: 20px auto;
       padding: 24px 3.2% 28px 8%;
-      width: 100%; }
-      .sum__item--stopwatch svg {
-        width: 29px;
-        height: 35px; }
-      .sum__item--hired svg {
-        width: 31px;
-        height: 32px; }
-      .sum__item--detective svg {
-        width: 30px;
-        height: 26px; }
-      .sum__item--tag svg {
-        width: 32px;
-        height: 32px; } }
+      width: 80%; } }
 
 .sum__item h3 {
   padding: 0;
@@ -1059,47 +992,12 @@ a {
       font-size: 20px;
       line-height: 140.62%; } }
 
-@media (max-width: 1199px) {
-  .sum__item--stopwatch h3 {
-    margin-bottom: 10px; } }
-
-@media (max-width: 767px) {
-  .sum__item--stopwatch h3 {
-    margin-top: 7px;
-    margin-bottom: 12px; } }
-
-.sum__item--detective h3 {
-  margin-top: 17px; }
-  @media (max-width: 1199px) {
-    .sum__item--detective h3 {
-      margin-top: 8px;
-      margin-bottom: 16px;
-      white-space: nowrap; } }
-  @media (max-width: 767px) {
-    .sum__item--detective h3 {
-      margin-top: 8px;
-      margin-bottom: 14px;
-      white-space: normal;
-      width: 95%; } }
-
-@media (max-width: 1199px) {
-  .sum__item--tag h3 {
-    margin-bottom: 10px; } }
-
-@media (max-width: 767px) {
-  .sum__item--tag h3 {
-    margin-top: 5px;
-    margin-bottom: 14px; } }
-
 .sum__item p {
   padding: 0;
   margin: 0; }
   @media (max-width: 767px) {
     .sum__item p {
       width: 98%; } }
-
-.sum__item--hired p {
-  width: 100%; }
 
 .sum__about {
   display: -webkit-box;
