@@ -43,11 +43,6 @@
           <span>Стоимость</span>
         </a>
       </li>
-      <li class="page-header__item">
-        <a class="page-header__link" href="#contacts">
-          <span>Контакты</span>
-        </a>
-      </li>
     </ul>
   </nav>
 </header>
@@ -156,7 +151,8 @@
         <li class="sum__item">
           <h3>Пополнение порфтолио</h3>
           <p>По итогу проекта у вас на гитхабе будет несколько готовых проектов, которые можно будет задеплоить
-            и включить в свое резюме. </p>
+            и включить в свое резюме.
+          </p>
         </li>
         <li class="sum__item">
           <h3>Проработка хард и софт скилов</h3>
@@ -165,14 +161,15 @@
           </p>
         </li>
         <li class="sum__item">
-          <h3>Подготовка к собеседованиям</h3>
-          <p>Помимо типовых вопросов по технологиям, мы будем обсуждать вопросы и тренироваться говорить о
-          </p>
-        </li>
-        <li class="sum__item">
           <h3>Фидбек</h3>
           <p>После каждого сделанного проекта у вас будет фидбек о том, что получается хорошо,
             а на что нужно обратить внимание
+          </p>
+        </li>
+        <li class="sum__item">
+          <h3>Поддержка и понимание</h3>
+          <p>Мы понимаем, как сложно понять свою ценность на рынке труда, тем более когда вы начинающий специалист.
+            Поэтому мы поможем вам сформировать адекватное отношение к
           </p>
         </li>
       </ul>
@@ -214,7 +211,7 @@
     <div class="request__wrap">
       <h2>Оставьте заявку и&nbsp;мы&nbsp;свяжемся с вами в&nbsp;ближайшее время</h2>
       <form class="request__form" method="post" enctype="multipart/form-data" action="save"
-            autocomplete="off">
+            autocomplete="off" id="form">
         <label aria-label="Имя">
           <input type="text" name="name" placeholder="Напишите ваше имя" required>
         </label>
@@ -240,6 +237,13 @@
       </form>
     </div>
   </section>
+  <section class="modal" id="modal">
+    <div class="modal-content">
+    <span class="close">&times;</span>
+      <h2>Спасибо за заявку</h2>
+      <p>Мы свяжемся с вами в течение суток</p>
+    </div>
+  </section>
 
 </main>
 
@@ -249,17 +253,11 @@
   </div>
   <div class="page-footer__contacts ">
     <div class="page-footer__contacts-item">
-      <svg width="20" height="20" viewBox="0 0 20 20">
-        <use xlink:href="#icon-mail"></use>
-      </svg>
       <p>
         emeail
       </p>
     </div>
     <div class="page-footer__contacts-item">
-      <svg width="20" height="20" viewBox="0 0 20 20">
-        <use xlink:href="#icon-call"></use>
-      </svg>
       <a class="page-footer__contacts-item--link" href="tel:+79221596030">8-922-159-60-30</a>
     </div>
   </div>
@@ -280,21 +278,26 @@
           <span>Стоимость</span>
         </a>
       </li>
-      <li class="page-footer__item">
-        <a class="page-footer__link" href="#contacts">
-          <span>Контакты</span>
-        </a>
-      </li>
     </ul>
   </nav>
 </footer>
 
-<script>
-    // Picture element HTML5 shiv
-    document.createElement("picture");
-</script>
 <script src="js/vendor.js"></script>
 <script src="js/main.js"></script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(70522576, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+    });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/70522576" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 </body>
 
 </html>

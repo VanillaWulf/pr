@@ -2,6 +2,10 @@
 
 var pageHeaderNav = document.querySelector('nav');
 var pageHeaderToggle = document.querySelector('.page-header__toggle');
+var formElem = document.getElementById('form');
+var modal = document.getElementById("modal");
+
+var span = document.getElementsByClassName("close")[0];
 
 pageHeaderNav.classList.remove('page-header__navigation--nojs');
 
@@ -38,3 +42,28 @@ menuItems.forEach(function (item) {
     closeMenu();
   });
 });
+
+formElem.onsubmit = async (e) => {
+  e.preventDefault();
+
+  let response = await fetch('/save/', {
+    method: 'POST',
+    body: new FormData(formElem)
+  });
+
+  if (modal && modal.style) {
+    modal.style.display = "block";
+  }
+
+  ym(70522576,'reachGoal','form_send');
+};
+
+span.onclick = function() {
+  modal.style.display = "none";
+};
+
+window.onclick = function(event) {
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+};

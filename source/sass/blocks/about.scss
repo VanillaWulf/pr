@@ -1,7 +1,5 @@
 .about {
-  padding: 100px 0px 150px;
-  background: url(/img/smoke.png) -50% no-repeat;
-  background-size: 50%;
+  padding: 100px 0;
 
   display: flex;
   align-items: center;
@@ -48,7 +46,6 @@
   }
 }
 
-
 .about__button {
   display: block;
   font-weight: 700;
@@ -73,7 +70,6 @@
   }
 }
 
-
 .about__wrap {
   width: 60%;
   margin: 0 auto;
@@ -87,56 +83,5 @@
   @include mobile {
     width: 90%;
     text-align: left;
-  }
-}
-
-.about__info-wrapper {
-  margin-left: 62px;
-
-  @include tablet {
-    margin-left: 0;
-  }
-
-  h2 {
-    font-size: 49px;
-    text-transform: uppercase;
-    margin: 0 0 8px 0;
-    letter-spacing: 0.09rem;
-
-    @include tablet {
-      font-size: 42px;
-    }
-
-    @include mobile {
-      font-size: 32px;
-    }
-  }
-
-  h3 {
-    font-size: 18px;
-    font-weight: 400;
-    margin: 0 0 42px 0;
-
-    @include mobile {
-      margin-bottom: 30px;
-    }
-  }
-
-  p {
-    margin: 0 0 8px 0;
-    font-weight: 300;
-    line-height: 150%;
-
-    @include mobile {
-      margin-bottom: 0;
-    }
-  }
-
-  p:last-child {
-    margin-bottom: 0;
-
-    @include tablet {
-      display: none;
-    }
   }
 }
