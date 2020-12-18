@@ -291,3 +291,11 @@
   line-height: 16px;
   white-space: nowrap;
 }
+
+.request__link {
+  color: $blue;
+
+  &:hover {
+    opacity: .8;
+  }
+}

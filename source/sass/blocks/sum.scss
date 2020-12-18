@@ -43,7 +43,7 @@
   padding: 40px 3.56%;
 
   width: 48.72%;
-  min-height: 200px;
+  min-height: 250px;
 
   background-color: $white;
   border: 1px solid #b7c6e0;
@@ -55,17 +55,6 @@
   &:hover {
     background: linear-gradient($blue, $red,  $blue);
     border: 1px solid $blue;
-
-    position: relative;
-
-    &::before {
-      position: absolute;
-      top: 40px;
-      left: 7.56%;
-
-      content: "";
-      background-size: cover;
-    }
 
     h3 {
       color: $white;
@@ -80,13 +69,6 @@
     padding: 24px 2.85% 25px 3.5%;
 
     width: 44%;
-    min-height: 250px;
-
-    &:hover {
-      &::before {
-        top: 25px;
-      }
-    }
   }
 
   @include mobile {

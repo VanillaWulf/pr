@@ -1,0 +1,10 @@
+.politics {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.politics ul {
+  @include list-reset();
+}
+
+
